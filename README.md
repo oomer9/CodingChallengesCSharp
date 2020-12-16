@@ -1,6 +1,5 @@
-# CodingChallengesCSharp
+# This project is to work on C# coding challenges.
 
-## This project is to work on C# coding challenges.
 ## All these challenges are done using Test-driven development
 
  ###  1. FindWords 
