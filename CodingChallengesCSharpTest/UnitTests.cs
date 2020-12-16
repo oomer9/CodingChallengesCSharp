@@ -9,7 +9,7 @@ namespace CodingChallengesTest
     public class UnitTests
     {
         [TestMethod]
-        public void FindWords1()
+        public void FindWordsTest1()
         {
             var program = new Program();
             var words = program.FindWords(3, new List<KnownLetter>()
@@ -27,7 +27,7 @@ namespace CodingChallengesTest
             CollectionAssert.AreEqual(words, expected);
         }
         [TestMethod]
-        public void FindWords2()
+        public void FindWordsTest2()
         {
             var program = new Program();
             var words = program.FindWords(5, new List<KnownLetter>()
@@ -40,6 +40,33 @@ namespace CodingChallengesTest
                 "ABUZZ"
             };
             CollectionAssert.AreEqual(words, expected);
+        }
+        [TestMethod]
+        public void IsPalindromeTest1()
+        {
+            var porgram = new Program();
+            var wordToTest = "Test";
+            var isPalindrome = porgram.IsPalindrome(wordToTest);
+
+            Assert.IsFalse(isPalindrome);
+        }
+        [TestMethod]
+        public void IsPalindromeTest2()
+        {
+            var porgram = new Program();
+            var wordToTest = "Racecar";
+            var isPalindrome = porgram.IsPalindrome(wordToTest);
+
+            Assert.IsTrue(isPalindrome);
+        }
+        [TestMethod]
+        public void IsPalindromeTest3()
+        {
+            var porgram = new Program();
+            var wordToTest = "RatsLiveOnNoEvilStar";
+            var isPalindrome = porgram.IsPalindrome(wordToTest);
+
+            Assert.IsTrue(isPalindrome);
         }
     }
 }
