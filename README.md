@@ -1,4 +1,4 @@
-# This project is to work on C# coding challenges.
+# This project is to work on C# coding challenges with unit tests.
 
 ## All these challenges are done using Test-driven development
 
