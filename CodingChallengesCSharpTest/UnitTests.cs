@@ -68,5 +68,37 @@ namespace CodingChallengesTest
 
             Assert.IsTrue(isPalindrome);
         }
+        [TestMethod]
+        public void RemoveDuplicatesTest1()
+        {
+            var porgram = new Program();
+            var list = new List<int>()
+            {
+                1,2,3,4,5,6,7
+            };
+            var expected = new List<int>()
+            {
+                1,2,3,4,5,6,7
+            };
+
+            var actual = porgram.RemoveDuplicates(list);
+            CollectionAssert.AreEqual(actual, expected);
+        }
+        [TestMethod]
+        public void RemoveDuplicatesTest2()
+        {
+            var porgram = new Program();
+            var list = new List<int>()
+            {
+                1,2,4,4,4,2,6,4,10,32
+            };
+            var expected = new List<int>()
+            {
+                1,2,4,6,10,32
+            };
+
+            var actual = porgram.RemoveDuplicates(list);
+            CollectionAssert.AreEqual(actual, expected);
+        }
     }
 }

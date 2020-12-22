@@ -23,8 +23,9 @@ namespace CodingChallenges
             //{
             //    Console.WriteLine(word);
             //}
-
-            Console.WriteLine(program.IsPalindrome("RatsLiveOnnoEvilStar"));
+            
+            //assume user passes 
+            Console.WriteLine(program.IsPalindrome("a"));
         }
 
 
@@ -76,6 +77,7 @@ namespace CodingChallenges
             return list;
         }
 
+        //User passes in string and method returns true if the string is a palindrome and false if not
         public bool IsPalindrome(string wordToTest)
         {
             var isPalindrome = true;
@@ -99,6 +101,27 @@ namespace CodingChallenges
             }
 
             return isPalindrome;
+        }
+        // remove duplicates in list of ints 
+        public List<int> RemoveDuplicates(List<int> list)
+        {
+            var response = new List<int>();
+
+            try
+            {
+                for(int i =0; i < list.Count; i++)
+                {
+                    if(!response.Any(num => num == list[i]))
+                    {
+                        response.Add(list[i]);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return response;
         }
     }
 }
