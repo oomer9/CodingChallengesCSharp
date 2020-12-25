@@ -7,3 +7,9 @@
    
 ### 2. IsPalindrome
 #### User passes in string and method returns true if the string is a palindrome and false if not 
+
+### 3. RemoveDuplicates
+#### User passes in a list of ints and method returns back a list of ints with any duplicates removed 
+
+### 4. IsAnagram
+#### User passes in two strings and method returns true if the strings are an Anagram and false if not 
