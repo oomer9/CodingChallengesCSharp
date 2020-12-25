@@ -23,7 +23,9 @@ namespace CodingChallenges
             //{
             //    Console.WriteLine(word);
             //}
-            
+            var word1 = "binery";
+            var word2 = "braIny";
+            var result = program.IsAnagram(word1, word2);
             //assume user passes 
             Console.WriteLine(program.IsPalindrome("a"));
         }
@@ -106,7 +108,6 @@ namespace CodingChallenges
         public List<int> RemoveDuplicates(List<int> list)
         {
             var response = new List<int>();
-
             try
             {
                 for(int i =0; i < list.Count; i++)
@@ -122,6 +123,33 @@ namespace CodingChallenges
                 Console.WriteLine(ex.Message);
             }
             return response;
+        }
+
+        public bool IsAnagram(string word1, string word2)
+        {
+            var isAnagram = false;
+            try
+            {
+                // add helper method to sort string 
+                if (SortString(word1.ToLower()) == SortString(word2.ToLower()))
+                {
+                    isAnagram = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            return isAnagram;
+        }
+
+        private string SortString(string str)
+        {
+            var listOfChars = str.ToArray();
+            Array.Sort(listOfChars);
+            return new string(listOfChars);
+
         }
     }
 }

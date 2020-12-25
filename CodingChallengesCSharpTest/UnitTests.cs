@@ -44,34 +44,34 @@ namespace CodingChallengesTest
         [TestMethod]
         public void IsPalindromeTest1()
         {
-            var porgram = new Program();
+            var program = new Program();
             var wordToTest = "Test";
-            var isPalindrome = porgram.IsPalindrome(wordToTest);
+            var isPalindrome = program.IsPalindrome(wordToTest);
 
             Assert.IsFalse(isPalindrome);
         }
         [TestMethod]
         public void IsPalindromeTest2()
         {
-            var porgram = new Program();
+            var program = new Program();
             var wordToTest = "Racecar";
-            var isPalindrome = porgram.IsPalindrome(wordToTest);
+            var isPalindrome = program.IsPalindrome(wordToTest);
 
             Assert.IsTrue(isPalindrome);
         }
         [TestMethod]
         public void IsPalindromeTest3()
         {
-            var porgram = new Program();
+            var program = new Program();
             var wordToTest = "RatsLiveOnNoEvilStar";
-            var isPalindrome = porgram.IsPalindrome(wordToTest);
+            var isPalindrome = program.IsPalindrome(wordToTest);
 
             Assert.IsTrue(isPalindrome);
         }
         [TestMethod]
         public void RemoveDuplicatesTest1()
         {
-            var porgram = new Program();
+            var program = new Program();
             var list = new List<int>()
             {
                 1,2,3,4,5,6,7
@@ -81,13 +81,13 @@ namespace CodingChallengesTest
                 1,2,3,4,5,6,7
             };
 
-            var actual = porgram.RemoveDuplicates(list);
+            var actual = program.RemoveDuplicates(list);
             CollectionAssert.AreEqual(actual, expected);
         }
         [TestMethod]
         public void RemoveDuplicatesTest2()
         {
-            var porgram = new Program();
+            var program = new Program();
             var list = new List<int>()
             {
                 1,2,4,4,4,2,6,4,10,32
@@ -97,8 +97,53 @@ namespace CodingChallengesTest
                 1,2,4,6,10,32
             };
 
-            var actual = porgram.RemoveDuplicates(list);
+            var actual = program.RemoveDuplicates(list);
             CollectionAssert.AreEqual(actual, expected);
+        }
+        [TestMethod]
+        public void IsAnagramTest1()
+        {
+            var program = new Program();
+            var word1 = "binary";
+            var word2 = "brainy";
+            var result = program.IsAnagram(word1, word2);
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void IsAnagramTest2()
+        {
+            var program = new Program();
+            var word1 = "binAry";
+            var word2 = "bRaIny";
+            var result = program.IsAnagram(word1,word2);
+            Assert.IsTrue(result);
+        }
+        [TestMethod]
+        public void IsAnagramTest3()
+        {
+            var program = new Program();
+            var word1 = "binery";
+            var word2 = "braIny";
+            var result = program.IsAnagram(word1, word2);
+            Assert.IsFalse(result);
+        }
+        [TestMethod]
+        public void IsAnagramTest4()
+        {
+            var program = new Program();
+            var word1 = "Test";
+            var word2 = "Testp";
+            var result = program.IsAnagram(word1, word2);
+            Assert.IsFalse(result);
+        }
+        [TestMethod]
+        public void IsAnagramTest5()
+        {
+            var program = new Program();
+            var word1 = "meteor";
+            var word2 = "remote";
+            var result = program.IsAnagram(word1, word2);
+            Assert.IsTrue(result);
         }
     }
 }
