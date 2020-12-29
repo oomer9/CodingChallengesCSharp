@@ -27,7 +27,8 @@ namespace CodingChallenges
             var word2 = "braIny";
             var result = program.IsAnagram(word1, word2);
             //assume user passes 
-            Console.WriteLine(program.IsPalindrome("a"));
+
+            Console.WriteLine("");
         }
 
 
@@ -124,7 +125,7 @@ namespace CodingChallenges
             }
             return response;
         }
-
+        // check if two words being passed in are anagrams 
         public bool IsAnagram(string word1, string word2)
         {
             var isAnagram = false;
@@ -149,7 +150,21 @@ namespace CodingChallenges
             var listOfChars = str.ToArray();
             Array.Sort(listOfChars);
             return new string(listOfChars);
-
+        }
+        //returns the square root of an integer and if number is not a perfect square, then return floor for number 
+        public int SquareRootofInteger(int number)
+        {
+            int squareRoot = -1;
+            try
+            {
+                squareRoot = (int)Math.Truncate(Math.Sqrt(number));
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            return squareRoot;
         }
     }
 }

@@ -145,5 +145,33 @@ namespace CodingChallengesTest
             var result = program.IsAnagram(word1, word2);
             Assert.IsTrue(result);
         }
+        //
+        [TestMethod]
+        public void SquareRootofIntegerTest1()
+        {
+            var program = new Program();
+            var num = 14;
+            var result = program.SquareRootofInteger(num);
+            var actual = 3;
+            Assert.AreEqual(result,actual);
+        }
+        [TestMethod]
+        public void SquareRootofIntegerTest2()
+        {
+            var program = new Program();
+            var num = 100;
+            var result = program.SquareRootofInteger(num);
+            var actual = 10;
+            Assert.AreEqual(result, actual);
+        }
+        [TestMethod]
+        public void SquareRootofIntegerTest3()
+        {
+            var program = new Program();
+            var num = 999;
+            var result = program.SquareRootofInteger(num);
+            var actual = 31;
+            Assert.AreEqual(result, actual);
+        }
     }
 }
