@@ -13,3 +13,7 @@
 
 ### 4. IsAnagram
 #### User passes in two strings and method returns true if the strings are an Anagram and false if not 
+
+### 5. SquareRootofInteger
+####  user passes in number. returns the square root of the number and if square root of number is not a perfect square, then return floor of square root of number 
+
