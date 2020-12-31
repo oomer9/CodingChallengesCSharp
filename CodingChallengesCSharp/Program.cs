@@ -27,7 +27,8 @@ namespace CodingChallenges
             var word2 = "braIny";
             var result = program.IsAnagram(word1, word2);
             //assume user passes 
-
+            int[,] array2Da = new int[,] { { 1, 2, 3, 4, 5, 6 }, };
+            var test = program.RotateMatrix(array2Da);
             Console.WriteLine("");
         }
 
@@ -165,6 +166,33 @@ namespace CodingChallenges
                 throw;
             }
             return squareRoot;
+        }
+        //rotates matrix 90 degrees to the right 
+        public int[,] RotateMatrix(int[,]  matrix)
+        {
+            // get number rows and columns to know size of rotated matrix
+            var row = matrix.GetLength(0);
+            var col = matrix.GetLength(1);
+            int[,] returnMatrix = new int[col, row];
+            try 
+            {
+                // tempCol is used the the index of the last row becomes the index of first column
+                var tempCol = row - 1;
+                for (int i = 0; i<row; i++)
+                {
+                    for(int j =0; j<col; j++)
+                    {
+                        returnMatrix[j, tempCol] = matrix[i, j];
+                    }
+                    tempCol--;
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
+            return returnMatrix;
         }
     }
 }

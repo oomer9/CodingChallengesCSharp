@@ -152,8 +152,8 @@ namespace CodingChallengesTest
             var program = new Program();
             var num = 14;
             var result = program.SquareRootofInteger(num);
-            var actual = 3;
-            Assert.AreEqual(result,actual);
+            var expected = 3;
+            Assert.AreEqual(result, expected);
         }
         [TestMethod]
         public void SquareRootofIntegerTest2()
@@ -161,8 +161,8 @@ namespace CodingChallengesTest
             var program = new Program();
             var num = 100;
             var result = program.SquareRootofInteger(num);
-            var actual = 10;
-            Assert.AreEqual(result, actual);
+            var expected = 10;
+            Assert.AreEqual(result, expected);
         }
         [TestMethod]
         public void SquareRootofIntegerTest3()
@@ -170,8 +170,35 @@ namespace CodingChallengesTest
             var program = new Program();
             var num = 999;
             var result = program.SquareRootofInteger(num);
-            var actual = 31;
-            Assert.AreEqual(result, actual);
+            var expected = 31;
+            Assert.AreEqual(result, expected);
+        }
+        [TestMethod]
+        public void RotateMatrixTest1()
+        {
+            var program = new Program();
+            int[,] array2Da = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
+            var actual = program.RotateMatrix(array2Da);
+            int[,] expected = new int[,] { { 7, 5, 3, 1 }, { 8, 6, 4, 2} };
+           CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void RotateMatrixTest2()
+        {
+            var program = new Program();
+            int[,] array2Da = new int[,] { { 1, 2 ,3}, {  4, 5, 6  }, { 7, 8, 9}, { 10, 11, 12} };
+            var actual = program.RotateMatrix(array2Da);
+            int[,] expected = new int[,] { { 10, 7, 4, 1 }, { 11, 8, 5, 2 },{12, 9, 6, 3 } };
+            CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void RotateMatrixTest3()
+        {
+            var program = new Program();
+            int[,] array2Da = new int[,] { { 1, 2, 3, 4, 5, 6 },};
+            var actual = program.RotateMatrix(array2Da);
+            int[,] expected = new int[,] { { 1 }, { 2 }, { 3 },{ 4},{5 },{ 6} };
+            CollectionAssert.AreEqual(expected, actual);
         }
     }
 }
