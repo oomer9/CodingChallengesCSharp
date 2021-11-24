@@ -17,3 +17,7 @@
 ### 5. SquareRootofInteger
 ####  user passes in number. returns the square root of the number and if square root of number is not a perfect square, then return floor of square root of number 
 
+### 5. RotateMatrix
+####  user passes in 2d Array. Method rotates array 90 degrees clockwise direction and returns it. 
+
+
