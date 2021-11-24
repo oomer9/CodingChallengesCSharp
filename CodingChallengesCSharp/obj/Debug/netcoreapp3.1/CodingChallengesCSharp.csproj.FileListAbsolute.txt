@@ -4,7 +4,6 @@ C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\bin\De
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\bin\Debug\netcoreapp3.1\CodingChallengesCSharp.runtimeconfig.dev.json
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\bin\Debug\netcoreapp3.1\CodingChallengesCSharp.dll
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\bin\Debug\netcoreapp3.1\CodingChallengesCSharp.pdb
-C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\Debug\netcoreapp3.1\CodingChallengesCSharp.csprojAssemblyReference.cache
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\Debug\netcoreapp3.1\CodingChallengesCSharp.AssemblyInfoInputs.cache
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\Debug\netcoreapp3.1\CodingChallengesCSharp.AssemblyInfo.cs
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\Debug\netcoreapp3.1\CodingChallengesCSharp.csproj.CoreCompileInputs.cache
@@ -12,3 +11,4 @@ C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\De
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\Debug\netcoreapp3.1\CodingChallengesCSharp.pdb
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\Debug\netcoreapp3.1\CodingChallengesCSharp.genruntimeconfig.cache
 C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\bin\Debug\netcoreapp3.1\english.csv
+C:\Users\18649\Source\Repos\CodingChallengesCSharp\CodingChallengesCSharp\obj\Debug\netcoreapp3.1\CodingChallengesCSharp.csprojAssemblyReference.cache

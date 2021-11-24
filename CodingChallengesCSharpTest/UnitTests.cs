@@ -2,17 +2,24 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using CodingChallenges;
+using CodingChallengesCSharp;
 
 namespace CodingChallengesTest
 {
     [TestClass]
     public class UnitTests
     {
+        private readonly ICodingChallenges _codingChallenges;
+
+        public  UnitTests()
+        {
+            _codingChallenges = new CodingChallengesCSharp.CodingChallenges();
+        }
         [TestMethod]
         public void FindWordsTest1()
         {
-            var program = new Program();
-            var words = program.FindWords(3, new List<KnownLetter>()
+            
+            var words = _codingChallenges.FindWords(3, new List<KnownLetter>()
             {
                 new KnownLetter()
                 {
@@ -29,8 +36,8 @@ namespace CodingChallengesTest
         [TestMethod]
         public void FindWordsTest2()
         {
-            var program = new Program();
-            var words = program.FindWords(5, new List<KnownLetter>()
+            
+            var words = _codingChallenges.FindWords(5, new List<KnownLetter>()
             {
                     new KnownLetter{Letter='b',Position=2},
                     new KnownLetter{Letter='z',Position=5},
@@ -44,34 +51,34 @@ namespace CodingChallengesTest
         [TestMethod]
         public void IsPalindromeTest1()
         {
-            var program = new Program();
+            
             var wordToTest = "Test";
-            var isPalindrome = program.IsPalindrome(wordToTest);
+            var isPalindrome = _codingChallenges.IsPalindrome(wordToTest);
 
             Assert.IsFalse(isPalindrome);
         }
         [TestMethod]
         public void IsPalindromeTest2()
         {
-            var program = new Program();
+            
             var wordToTest = "Racecar";
-            var isPalindrome = program.IsPalindrome(wordToTest);
+            var isPalindrome = _codingChallenges.IsPalindrome(wordToTest);
 
             Assert.IsTrue(isPalindrome);
         }
         [TestMethod]
         public void IsPalindromeTest3()
         {
-            var program = new Program();
+            
             var wordToTest = "RatsLiveOnNoEvilStar";
-            var isPalindrome = program.IsPalindrome(wordToTest);
+            var isPalindrome = _codingChallenges.IsPalindrome(wordToTest);
 
             Assert.IsTrue(isPalindrome);
         }
         [TestMethod]
         public void RemoveDuplicatesTest1()
         {
-            var program = new Program();
+            
             var list = new List<int>()
             {
                 1,2,3,4,5,6,7
@@ -81,13 +88,13 @@ namespace CodingChallengesTest
                 1,2,3,4,5,6,7
             };
 
-            var actual = program.RemoveDuplicates(list);
+            var actual = _codingChallenges.RemoveDuplicates(list);
             CollectionAssert.AreEqual(actual, expected);
         }
         [TestMethod]
         public void RemoveDuplicatesTest2()
         {
-            var program = new Program();
+            
             var list = new List<int>()
             {
                 1,2,4,4,4,2,6,4,10,32
@@ -97,108 +104,128 @@ namespace CodingChallengesTest
                 1,2,4,6,10,32
             };
 
-            var actual = program.RemoveDuplicates(list);
+            var actual = _codingChallenges.RemoveDuplicates(list);
             CollectionAssert.AreEqual(actual, expected);
         }
         [TestMethod]
         public void IsAnagramTest1()
         {
-            var program = new Program();
+            
             var word1 = "binary";
             var word2 = "brainy";
-            var result = program.IsAnagram(word1, word2);
+            var result = _codingChallenges.IsAnagram(word1, word2);
             Assert.IsTrue(result);
         }
         [TestMethod]
         public void IsAnagramTest2()
         {
-            var program = new Program();
+            
             var word1 = "binAry";
             var word2 = "bRaIny";
-            var result = program.IsAnagram(word1,word2);
+            var result = _codingChallenges.IsAnagram(word1,word2);
             Assert.IsTrue(result);
         }
         [TestMethod]
         public void IsAnagramTest3()
         {
-            var program = new Program();
+            
             var word1 = "binery";
             var word2 = "braIny";
-            var result = program.IsAnagram(word1, word2);
+            var result = _codingChallenges.IsAnagram(word1, word2);
             Assert.IsFalse(result);
         }
         [TestMethod]
         public void IsAnagramTest4()
         {
-            var program = new Program();
+            
             var word1 = "Test";
             var word2 = "Testp";
-            var result = program.IsAnagram(word1, word2);
+            var result = _codingChallenges.IsAnagram(word1, word2);
             Assert.IsFalse(result);
         }
         [TestMethod]
         public void IsAnagramTest5()
         {
-            var program = new Program();
+            
             var word1 = "meteor";
             var word2 = "remote";
-            var result = program.IsAnagram(word1, word2);
+            var result = _codingChallenges.IsAnagram(word1, word2);
             Assert.IsTrue(result);
         }
         //
         [TestMethod]
         public void SquareRootofIntegerTest1()
         {
-            var program = new Program();
+            
             var num = 14;
-            var result = program.SquareRootofInteger(num);
+            var result = _codingChallenges.SquareRootofInteger(num);
             var expected = 3;
             Assert.AreEqual(result, expected);
         }
         [TestMethod]
         public void SquareRootofIntegerTest2()
         {
-            var program = new Program();
+            
             var num = 100;
-            var result = program.SquareRootofInteger(num);
+            var result = _codingChallenges.SquareRootofInteger(num);
             var expected = 10;
             Assert.AreEqual(result, expected);
         }
         [TestMethod]
         public void SquareRootofIntegerTest3()
         {
-            var program = new Program();
+            
             var num = 999;
-            var result = program.SquareRootofInteger(num);
+            var result = _codingChallenges.SquareRootofInteger(num);
             var expected = 31;
             Assert.AreEqual(result, expected);
         }
         [TestMethod]
         public void RotateMatrixTest1()
         {
-            var program = new Program();
+            
             int[,] array2Da = new int[,] { { 1, 2 }, { 3, 4 }, { 5, 6 }, { 7, 8 } };
-            var actual = program.RotateMatrix(array2Da);
+            var actual = _codingChallenges.RotateMatrix(array2Da);
             int[,] expected = new int[,] { { 7, 5, 3, 1 }, { 8, 6, 4, 2} };
            CollectionAssert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void RotateMatrixTest2()
         {
-            var program = new Program();
+            
             int[,] array2Da = new int[,] { { 1, 2 ,3}, {  4, 5, 6  }, { 7, 8, 9}, { 10, 11, 12} };
-            var actual = program.RotateMatrix(array2Da);
+            var actual = _codingChallenges.RotateMatrix(array2Da);
             int[,] expected = new int[,] { { 10, 7, 4, 1 }, { 11, 8, 5, 2 },{12, 9, 6, 3 } };
             CollectionAssert.AreEqual(expected, actual);
         }
         [TestMethod]
         public void RotateMatrixTest3()
         {
-            var program = new Program();
+            
             int[,] array2Da = new int[,] { { 1, 2, 3, 4, 5, 6 },};
-            var actual = program.RotateMatrix(array2Da);
+            var actual = _codingChallenges.RotateMatrix(array2Da);
             int[,] expected = new int[,] { { 1 }, { 2 }, { 3 },{ 4},{5 },{ 6} };
             CollectionAssert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void MedianOfTwoArraysTest1()
+        {
+            
+            int[] list1 = new int[] { 1, 2};
+            int[] list2 = new int[] { 3,4,5 };
+            double actual = _codingChallenges.MedianOfTwoArrays(list1,list2);
+            double expected = 3;
+            Assert.AreEqual(expected, actual);
+        }
+        [TestMethod]
+        public void MedianOfTwoArraysTest2()
+        {
+            
+            int[] list1 = new int[] { 1, 2 };
+            int[] list2 = new int[] { 3, 4 };
+            double actual = _codingChallenges.MedianOfTwoArrays(list1, list2);
+            double expected = 2.5;
+            Assert.AreEqual(expected, actual);
         }
     }
 }
